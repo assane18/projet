@@ -1,0 +1,120 @@
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('../public/background.svg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #333;
+}
+
+.container {
+  text-align: center;
+}
+
+.login-container,
+.register-container,
+.verify-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 40px 30px;
+  background: white;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.logo {
+  width: 300px;
+  margin: 0 auto -90px;
+  display: block;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #b3ddfc;
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #80c8ff;
+}
+
+.error {
+  color: red;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+
+/* Pour otp page */
+.otp-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.otp-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 10;
+}
+
+.otp-box {
+  width: 45px;
+  height: 50px;
+  font-size: 24px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+.otp-box:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+
+.resend-text {
+  margin-top: 10px;
+  color: #bbb;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  user-select: none;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.resend-text:hover {
+  font-weight: bold;
+  color: #555;
+}
