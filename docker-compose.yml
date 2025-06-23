@@ -1,6 +1,18 @@
 version: '3.8'
 
 services:
+  backend:
+    build: ./backend
+    container_name: backend
+    depends_on:
+      - db
+    env_file:
+      - ./backend/.env
+    ports:
+      - '3000:3000'
+    networks:
+      - mynet
+
   db:
     image: postgres:14
     restart: always
@@ -12,6 +24,21 @@ services:
       - '5432:5432'
     volumes:
       - pgdata:/var/lib/postgresql/data
+    networks:
+      - mynet
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    ports:
+      - "3001:3000"
+    depends_on:
+      - backend
+    networks:
+      - mynet
+
 
 volumes:
   pgdata:
+
+networks:
+  mynet:

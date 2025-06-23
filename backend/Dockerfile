@@ -15,10 +15,10 @@ RUN npm install
 COPY . .
 
 # Construire le projet NestJS
-RUN npm run start:dev
+
 
 # Exposer le port
 EXPOSE 3000
 
 # Lancer l'app
-CMD ["node", "dist/main"]
+CMD ["npm", "run", "start:dev"]

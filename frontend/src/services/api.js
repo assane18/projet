@@ -1,8 +1,10 @@
 // src/services/api.js
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3000";
+
 export const api = {
   register: async (userData) => {
     try {
-      const res = await fetch('http://localhost:3000/auth/register', {
+      const res = await fetch(`${API_URL}/auth/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -22,7 +24,7 @@ export const api = {
 
   login: async (credentials) => {
     try {
-      const res = await fetch('/auth/login', {
+      const res = await fetch(`${API_URL}/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(credentials),
