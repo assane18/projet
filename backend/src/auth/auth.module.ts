@@ -10,7 +10,6 @@ import { TwilioModule } from '../2fa/twilio.module';
 @Module({
   imports: [
     UsersModule,
-    AuthModule,
     PassportModule,
     JwtModule.register({
       secret: process.env.JWT_SECRET || 'secret',
